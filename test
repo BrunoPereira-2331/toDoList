@@ -1,0 +1,317 @@
+#principal{
+    width: auto;
+    margin: auto 5%;
+    font-family: sans-serif;
+    margin-bottom: 5%;
+}
+
+body{
+    background-color: #c1e0ff;
+}
+
+.header-h1{
+    margin: 10px 0px 15px;
+    
+}
+
+.paragrafo-header{
+    font-size: 24px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+.container-table-task{
+}
+
+.table-task{
+    border-collapse: collapse;
+    background-color: #e6e6e6;
+    font-size: 24px;
+    width:90%;
+}
+
+.table-task tbody tr td:first-child{
+    padding: 0 5px;
+}
+
+.table-task-head{
+    border-collapse: collapse;
+    background-color: #8ac5ff;
+    border: 2px solid black;
+    width: 15%;
+}
+
+.table-task-body{
+    border: 2px solid black;
+}
+
+.table-task-head-buttons{
+    border-top: 2px solid #c1e0ff;
+    background-color: #c1e0ff;
+}
+
+.table-task-green{
+    background-color: #3fd645;
+}
+
+.table-task-red{
+    background-color: rgb(255, 0, 0);
+}
+
+.table-task-data{
+    border: 2px solid #000000;
+    margin: 0 35px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.table-task-name{
+
+}
+
+.table-task-datetime{
+    text-align: center;
+    width: 55%;
+}
+
+.table-task-status{
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.table-task-td-buttons{
+    padding: 0px 0px 0px 0px;
+    border: 0px none black;
+    background-color: #8ac5ff;
+    width: 3%;
+}
+
+.table-task-button-default{
+    color: black;
+    display: inline-block;
+    margin: 0px;
+    font-size: 36px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: 0.4s linear;
+    height: 40px;
+    text-decoration: none;
+    width: auto;
+}
+
+.table-task-ok-button{
+    padding: 4px 4px 5px 4px;
+}
+
+.table-task-delete-button{
+    padding: 4px 4px 5px 5px;
+}
+
+.table-task-ok-button:hover{
+    background-color: #00ff00;
+    cursor: pointer;
+}
+
+.table-task-delete-button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.task-button-default{
+    color: black;
+    background-color: #ebf6ff;
+    text-decoration: none;
+}
+
+.new-task-button{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px; 
+    letter-spacing: 1px;
+    transition: 0.4s linear;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid #333;
+    box-shadow: 2px 2px #bbb;
+    font-size: 26px;
+}
+
+.new-task-button:hover{
+    cursor: pointer;
+    background-color: #c8e4ff;
+}
+
+.new-task-input{
+    height: 25px;
+    font-size: 28px;
+}
+
+.new-task-label{
+    font-size: 26px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#principal{
+    margin: auto 5%;
+    font-family: sans-serif;
+    margin-bottom: 5%;
+    border: 2px solid red;
+}
+
+body{
+    background-color: #c1e0ff;
+}
+
+.header-h1{
+    margin: 10px 0px 15px;
+    
+}
+
+.paragrafo-header{
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.container-table-task{
+    border: 2px solid yellow;
+}
+
+.table-task{
+    border-collapse: collapse;
+    background-color: #e6e6e6;
+    font-size: 24px;
+    border: 2px solid yellow;
+}
+
+.table-task tbody tr td:first-child{
+    padding: 0 5px;
+}
+
+.table-task-head{
+    border-collapse: collapse;
+    background-color: #8ac5ff;
+    border: 2px solid black;
+}
+
+.table-task-body{
+    border: 2px solid black;
+}
+
+.table-task-head-buttons{
+    border-top: 2px solid #c1e0ff;
+    background-color: #c1e0ff;
+}
+
+.table-task-green{
+    background-color: #3fd645;
+}
+
+.table-task-red{
+    background-color: red;
+}
+
+.table-task-data{
+    border: 2px solid #000000;
+    margin: 0 35px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.table-task-name{
+
+}
+
+.table-task-datetime{
+    text-align: center;
+}
+
+.table-task-status{
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.table-task-td-buttons{
+    padding: 0px 0px 0px 0px;
+    border: 0px none black;
+    background-color: #8ac5ff;
+}
+
+.table-task-button-default{
+    color: black;
+    margin: 0px;
+    font-size: 36px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: 0.4s linear;
+    height: 40px;
+    text-decoration: none;
+}
+
+.table-task-ok-button{
+    padding: 4px 4px 5px 4px;
+}
+
+.table-task-delete-button{
+    padding: 4px 4px 5px 5px;
+}
+
+.table-task-ok-button:hover{
+    background-color: #00ff00;
+    cursor: pointer;
+}
+
+.table-task-delete-button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.task-button-default{
+    color: black;
+    background-color: #ebf6ff;
+    text-decoration: none;
+}
+
+.new-task-button{
+    margin-top: 10px;
+    margin-left: 5px; 
+    letter-spacing: 1px;
+    transition: 0.4s linear;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid #333;
+    box-shadow: 2px 2px #bbb;
+    font-size: 26px;
+}
+
+.new-task-button:hover{
+    cursor: pointer;
+    background-color: #c8e4ff;
+}
+
+.new-task-input{
+    height: 25px;
+    font-size: 28px;
+}
+
+.new-task-label{
+    font-size: 26px;
+    margin: auto;
+}
