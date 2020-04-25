@@ -9,10 +9,8 @@
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/fontawesome-free-5.12.1-web/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
-
-        <link href="normalize.css" rel=stylesheet>
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
@@ -25,13 +23,10 @@
             </header>
             <?php
             require_once('php/db.php');
-            $db = new dbconnection();
-            $conn = $db->f_obtem_conexao();
-            // Executa a query da variável $sql
-
-            $resultado = $conn->query($sql = $db->obtem_query());
+            $db = new DbConnection();
+            $resultado = $db->selectAll();
             // Verifica se a query retornou registros
-            if ($resultado->num_rows > 0) {
+            if ($resultado->fetch(PDO::FETCH_ASSOC) > 0) {
             ?>
             <br/>
             <main>
@@ -47,7 +42,7 @@
                         </thead>
                         <tbody class="table-task-body">
                             <?php
-                while($registro = $resultado->fetch_assoc()) {
+                while($registro = $resultado->fetch(PDO::FETCH_ASSOC)) {
                     if ($registro["status"] == 'finalizada') {
                         echo '<tr class="table-task-row table-task-green">';
                     } else {
@@ -57,7 +52,7 @@
                             <td class="table-task-data table-task-name"><?php echo $registro["name"]; ?></td>
                             <td class="table-task-data table-task-datetime"><?php echo $registro["date"]; ?></td>
                             <td class="table-task-data table-task-status"><?php echo $registro["status"]; ?></td>
-
+                            
                             <td class="table-task-td-buttons">
                                 <a href="php/oktask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-ok-button"><i class="far fa-check-circle"></i></a></td>
 
@@ -69,17 +64,15 @@
                             <td class="table-task-td-buttons">
                                 <a href="php/deletetask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-delete-button"><i class="fas fa-trash-alt"></i></a>
                             </td>
-                            <?php }?>
-                            <?php
-                            echo '</tr>';
-                            ?>
+                            <?php } echo '</tr>';?>
                         </tbody>
                     </table>
+                    
                 </section>
                 <?php
             }else {
                 echo '<p>Você não possui Tarefas cadastradas!</p>';
-                $conn->close();}
+                $conn = null;}
                 ?>
             </main>
         </div>

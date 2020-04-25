@@ -2,7 +2,10 @@
 <html lang="pt-br">
     <head>
         <title>Lista de Tarefas</title>
-        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
+        <link href="../css/styles.css" type="text/css" rel="stylesheet">
+        
     </head>
     <body>
         <div id="principal">
@@ -38,6 +41,10 @@
                 // submit do formulário
                 //document.getElementById("formulario").onsubmit = validaForm;
             </script>
+            <script src="../js/slim.min.js"></script>
+            <script src="../js/popper.min.js" ></script>
+            <script src="../js/bootstrap.min.js">  </script>
+
         </div>
     </body>
 </html>
