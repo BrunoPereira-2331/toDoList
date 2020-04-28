@@ -62,7 +62,7 @@
                             </td>
 
                             <td class="table-task-td-buttons">
-                                <a href="php/deletetask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-delete-button"><i class="fas fa-trash-alt"></i></a>
+                                <a href="php/deletetask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-delete-button" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fas fa-trash-alt"></i></a>
                             </td>
                             <?php } echo '</tr>';?>
                         </tbody>
