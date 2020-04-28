@@ -9,7 +9,7 @@
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css">
         <link href="fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
@@ -17,16 +17,18 @@
     <body>
         <div id="principal">
             <header>
-                <h1 class="header-h1">Lista de Tarefas</h1>
-                <p class="paragrafo-header">Cadastre aqui suas tarefas</p>
-                <a href="php/newtask.php" class="task-button-default new-task-button">Cadastrar Tarefa</a>
+                <div class="header-div-index">
+                    <h1 class="header-h1">Lista de Tarefas</h1>
+                    <p class="paragrafo-header">Cadastre aqui suas tarefas</p>
+                    <a href="php/newtask.php" class="task-button-default new-task-button">Cadastrar Tarefa</a>
+                    <a href="php/newtask.php" class="task-button-default new-task-button">Historico</a>
+                </div>
             </header>
             <?php
             require_once('php/db.php');
             $db = new DbConnection();
             $resultado = $db->selectAll();
-            // Verifica se a query retornou registros
-            if ($resultado->fetch(PDO::FETCH_ASSOC) > 0) {
+            if ($resultado->rowCount() > 0) {
             ?>
             <br/>
             <main>
@@ -42,7 +44,7 @@
                         </thead>
                         <tbody class="table-task-body">
                             <?php
-                while($registro = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                while($registro = $resultado->fetch()) {
                     if ($registro["status"] == 'finalizada') {
                         echo '<tr class="table-task-row table-task-green">';
                     } else {
@@ -76,8 +78,8 @@
                 ?>
             </main>
         </div>
-        <script src="js/slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="js/slim.min.js"></script>
+        <script src="js/popper.min.js" ></script>
+        <script src="js/bootstrap.min.js" ></script>
     </body>
 </html>
