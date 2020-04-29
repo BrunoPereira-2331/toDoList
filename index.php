@@ -20,8 +20,8 @@
                 <div class="header-div-index">
                     <h1 class="header-h1">Lista de Tarefas</h1>
                     <p class="paragrafo-header">Cadastre aqui suas tarefas</p>
-                    <a href="php/newtask.php" class="task-button-default new-task-button">Cadastrar Tarefa</a>
-                    <a href="php/newtask.php" class="task-button-default new-task-button">Historico</a>
+                    <a href="php/newtask.php" class="default-style-buttons new-task-button">Cadastrar Tarefa</a>
+                    <a href="php/history.php" class="default-style-buttons new-task-button">Historico</a>
                 </div>
             </header>
             <?php
@@ -64,7 +64,7 @@
                             </td>
 
                             <td class="table-task-td-buttons">
-                                <a href="php/deletetask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-delete-button" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fas fa-trash-alt"></i></a>
+                                <a href="php/deletetask.php?id=<?php echo $registro["id"]; ?>" class="table-task-button-default table-task-delete-button" onclick="return confirm('Voce tem certeza que deseja deletar essa tarefa?');"><i class="fas fa-trash-alt"></i></a>
                             </td>
                             <?php } echo '</tr>';?>
                         </tbody>

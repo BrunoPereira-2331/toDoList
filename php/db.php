@@ -27,6 +27,10 @@
     public function selectAll() {
         return $this->conn->query("SELECT id, name, date, status FROM list");
     }
+    
+    public function selectAllHistory() {
+        return $this->conn->query("SELECT id, name, date, status FROM history");
+    }
 
     public function updateStatus($id, $date) {
         $this->conn->query("UPDATE list SET status = 'finalizada', date ='" .$date. "' WHERE id=".$id);
@@ -34,6 +38,13 @@
 
     public function deleteTask($id) {
         $this->conn->query("DELETE FROM list WHERE id=".$id);
+    }
+    public function deleteHistoryTask($id) {
+        $this->conn->query("DELETE FROM history WHERE id=".$id);
+    }
+    
+    public function deleteHistoryAll() {
+        $this->conn->query("DELETE FROM history");
     }
 
     public function changeStatus($id, $status) {

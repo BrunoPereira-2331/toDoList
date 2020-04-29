@@ -9,8 +9,9 @@ body{
 }
 
 .header-h1{
-    margin: 10px 0px 15px;
-
+    margin: 12px 0px 15px;
+    font-size: 38px;
+    
 }
 
 .paragrafo-header{
@@ -127,7 +128,7 @@ body{
     text-decoration: none;
 }
 
-.new-task-button{
+.default-style-buttons{
     margin-top: 10px;
     margin-left: 5px; 
     letter-spacing: 1px;
@@ -137,6 +138,17 @@ body{
     font-size: 18px;
     border: 1px solid #333;
     font-size: 26px;
+    text-decoration: none;
+    background-color: #ebf6ff;
+    color: black;
+}
+
+.history-clear-button{
+}
+
+.history-clear-button:hover{
+    cursor: pointer;
+    background-color: red;
 }
 
 .new-task-button:hover{

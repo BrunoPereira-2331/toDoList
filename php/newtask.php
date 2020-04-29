@@ -4,7 +4,7 @@
         <title>Lista de Tarefas</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
-        <link href="../css/styles.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
         
     </head>
     <body>
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="div-new-task-options">
-                        <button class="task-button-default new-task-button" input type="submit" value="Criar">Criar</button>
+                        <button class="default-style-buttons new-task-button" input type="submit" value="Criar">Criar</button>
 
                         <label class="label-new-task-checkbox">
                             <input class="input-new-task-checkbox" type="checkbox" name="checkboxStatus" value="finalizada">Finalizada
@@ -31,15 +31,6 @@
                 </form>
             </main>
             <script type="text/javascript">
-                // var validaForm = function(){
-                //     var nomeTarefa = document.getElementById("inputName").value;
-                //     if (nomeTarefa == ""){
-                //         alert("É necessário informar o nome da Tarefa");
-                //         return false;
-                //     }
-                // }
-                // submit do formulário
-                //document.getElementById("formulario").onsubmit = validaForm;
             </script>
             <script src="../js/slim.min.js"></script>
             <script src="../js/popper.min.js" ></script>
